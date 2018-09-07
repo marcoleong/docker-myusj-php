@@ -13,7 +13,7 @@ RUN apt-get update && \
 #tar -xf /usr/src/php/ext/mongo.tar.gz -C /usr/src/php/ext/ && \
 #rm /usr/src/php/ext/mongo.tar.gz && \
 #docker-php-ext-install mongo-php-driver-legacy-1.6.12
-
+RUN a2enmod rewrite
 
 COPY apache2.conf /etc/apache2/apache2.conf
 COPY php.ini /usr/local/etc/php/
